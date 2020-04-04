@@ -10,7 +10,7 @@ script:
 - bazel build :app
 - ./bazel-bin/app
 - rm -rf app
-- cp -LR ./bazel-bin/app app
+- cp -LR ./bazel-bin app
 - tar -zcvf app.tar.gz app
 addons:
   apt:
