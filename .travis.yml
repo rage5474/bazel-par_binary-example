@@ -9,8 +9,7 @@ install:
 script:
 - bazel build :app
 - cp -L ./bazel-bin/app .
-- chmod 755 app
-- ./app
+- ./bazel-bin/app
 addons:
   apt:
     packages:
