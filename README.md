@@ -1,0 +1,1 @@
+# bazel-par_binary-example
