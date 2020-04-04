@@ -8,6 +8,7 @@ install:
 - sudo apt-get install bazel
 script:
 - bazel build :app
+- cp -L ./bazel-bin/app .
 addons:
   apt:
     packages:
@@ -17,6 +18,6 @@ deploy:
   provider: releases
   api_key:
     secure: Y/flWUoL+iimLfBR4gDBnNNzyji+F/zDTmsux7CUfr3fdK/A26BpK3N/UgTn1nhac81+aRVeeXoLK3qOxiDY8F4+guZe09IcFJGnUcKu1gVwCJtZGbfdTObjkm2ggBd+mLNg+Y4jAIrMtlOOer0mJQ4xIzIAsMDNcuIsVAZPL6lT6yKlUZSiIc4uvvykq/dmALd+jUSZUpIRZ4sSuPSeuwO2r8ESk0xdtCjAL3qfi7TeUsjyZ0yu4GHA/U4CqjC2dO51fGY7iaua3VoUni0oxlMjkzQzPNDX9W3goBKiHdwTcozLgncg5nAmORcLtELJUZG+UiORwT+uviBk+mW/7h66GreTHM0BWB8B/DHwZvVHow+2h+jqO/8xOgNUHSjnimX4Hz1ZFaHyLQPb1ekbcJwjbXIx9Id16vXCAIwTe7q4ak6AsPVLUikfGMdVQ62ki3AupIHzAXlo6To+OlYkTGdPXK5OjGBUhomGDDyO4xLDa4187XYm4jVHaiepT0ByTlqR0D1c68OQkneuvdi2bIGmje4UcjUA55Vzj50zq4sz0Mg9TP44NpfNT6BBB29N/Oovoh24YpGz62P1M+QINBwmgAvv3P4PquHL/265FHWIA0SZ2iiltmP2miecu6++jv5KxvulM7lIBnexBuOoP2z8Pe5nIkLZdgUlOUSW2zk=
-  file: bazel-bin/app
+  file: app
   on:
     repo: rage5474/bazel-par_binary-example
