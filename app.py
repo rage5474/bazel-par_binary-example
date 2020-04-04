@@ -1,5 +1,7 @@
+import psutil
+
 def main():
-    print("hello world!")
+    print(psutil.cpu_times())
 
 if __name__ == "__main__":
     main()
